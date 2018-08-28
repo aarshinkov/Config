@@ -17,6 +17,7 @@ git status
 rm -f ./.git/index.lock
 git add .
 git commit -m "Files changed"
+git commit <filename> -m "File changed"
 git push -u origin master
 
 --- pull ---
