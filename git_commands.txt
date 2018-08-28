@@ -1,0 +1,28 @@
+cd D:/Projects_A/PureShots
+
+new pc
+cd <folder>
+git config --global user.name "Atanas Arshinkov"
+git config --global user.email a.arshinkov97@gmail.com
+
+--- clone ---
+cd <folder>
+git clone https://github.com/coda97/PureShots.git
+cd PureShots
+
+--- commit ---
+cd D:/Projects/PureShots
+cd D:/Projects_A/PureShots
+git status
+rm -f ./.git/index.lock
+git add .
+git commit -m "Files changed"
+git push -u origin master
+
+--- pull ---
+cd <folder>
+git checkout master
+git pull
+
+--- lock ---
+rm -f ./.git/index.lock
