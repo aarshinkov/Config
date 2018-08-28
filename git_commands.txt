@@ -1,6 +1,6 @@
 cd D:/Projects_A/PureShots
 
-new pc
+--- new pc ---
 cd <folder>
 git config --global user.name "Atanas Arshinkov"
 git config --global user.email a.arshinkov97@gmail.com
