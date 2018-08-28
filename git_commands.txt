@@ -31,3 +31,4 @@ rm -f ./.git/index.lock
 --- commit history log ---
 cd D:/Projects/PureShots
 cd D:/Projects_A/PureShots
+git log
