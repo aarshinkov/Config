@@ -30,5 +30,5 @@ git log
 --- git branch ---
 git branch <branch_name>
 
---- user branch/mastere ---
+--- user branch/master ---
 git checkout <branch_name>/master
