@@ -1,0 +1,35 @@
+Add ssh key
+
+1.
+Open git bash terminal
+
+2.
+Open home directory:
+cd ~
+
+3.
+ssh-keygen
+
+4.
+Enter key name (not required)
+	-- if you want DEFAULT key name leave blank and click Enter
+
+5.
+Enter passphrase (not required)
+	-- if you want NO PASSWORD simpli leave blank and click Enter
+
+6. To view files in .ssh folder (it might have to navigate to folder containing .ssh folder with cd command)
+dir .ssh
+
+7.
+eval $(ssh-agent)
+
+8. Add private key (the one that haven't got .pub in name seen in command 'dir .ssh')
+ssh-add ~/.ssh/<private_key_file>
+
+9. Open public file in notepad (or similar), copy content and paste in either bitbucket or github.
+Content should start with:
+ssh-rsa ...
+
+
+	

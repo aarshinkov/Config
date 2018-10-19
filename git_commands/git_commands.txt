@@ -1,0 +1,64 @@
+Git commands
+
+========== CONFIG ==========
+
+--- new pc ---
+cd <folder>
+git config --global user.name "<name>"
+git config --global user.email <email>
+
+========== END CONFIG ==========
+
+========== USERS ==========
+
+--- clone (get project) ---
+git clone <repository_link>
+
+--- get changes from repository ---
+git checkout master/<branch_name>
+git pull
+
+--- use master/branch ---
+git checkout master/<branch_name>
+
+--- view local changes ---
+git status
+
+--- commit to branch ---
+git add .
+git commit -m "<commit_message>"
+git commit <filename> -m "<commit_message>" (for only one file)
+git push --set-upstream origin <branch_name>
+
+--- remove locks ---
+rm -f ./.git/index.lock
+
+--- view log history ---
+git log
+
+--- cancel last commit before you pushed it ---
+git reset --hard HEAD^
+
+========== END USERS ==========
+
+========== ADMINISTRATOR ==========
+
+--- commit to master (only for administrator) ---
+git add .
+git commit -m "<commit_message>"
+git commit <filename> -m "File changed"
+git push -u origin master
+
+--- create branch (only for administrator) ---
+git branch <branch_name>
+
+--- put branch in repository ---
+git push origin <branch_name>
+
+--- detele branch (only for administrator) ---
+git checkout master
+git branch -d <branch_name>
+git remote prune origin
+git push origin --delete <branch_name>
+
+========== END ADMINISTRATOR ==========

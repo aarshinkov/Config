@@ -1,0 +1,73 @@
+========== For template file ==========
+
+<!-- Add to html tag -->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!-- Add minimum meta tags -->
+
+	<title>Website</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	  
+	  
+<!-- Add to body tag -->
+
+	<div layout:fragment="contentDiv">
+		CONTENT OF THE CHOSEN PAGE.
+	</div>
+	
+	<!-- or you can add div wrapper with class 'container' or 'container-fluid' -->
+	
+	<div class="container">
+      <div layout:fragment="contentDiv">
+        CONTENT OF THE CHOSEN PAGE.
+      </div>
+    </div>
+	
+<!-- Add main menu from external source -->
+
+	<div th:replace="fragments/mainMenu :: #mainMenu"></div>
+	
+========== END template file ==========
+
+========== For inner file ==========
+
+<!-- Add this to html tag -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{templates/contentTemplate}">
+	  
+	<!-- contentTemplate - name of the template file -->
+	
+--- Add fragment name ---
+
+	<!-- contentDiv - the name given in template file before CONTENT OF THE CHOSEN PAGE. -->
+	<div layout:fragment="contentDiv">
+
+========== END inner file ==========
+
+========== For fragments ==========
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	  
+	  <!-- or: -->
+	  
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+	  
+	  <!-- remove head tags -->
+	  
+	  <!-- include div with id -->
+	  <div id="mainMenu">
+
+========== END fragments ==========
+	
+
+	  

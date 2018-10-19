@@ -1,4 +1,4 @@
-package com.pureshots.config;
+package <some_package>
 
 import java.util.*;
 import org.springframework.context.annotation.*;
@@ -6,8 +6,6 @@ import org.springframework.mail.javamail.*;
 import org.springframework.web.servlet.config.annotation.*;
 
 @Configuration
-@EnableWebMvc
-@ComponentScan(basePackages = "com.pureshots")
 public class MailConfig
 {
   @Bean
@@ -17,8 +15,8 @@ public class MailConfig
     mailSender.setHost("smtp.gmail.com");
     mailSender.setPort(587);
 
-    mailSender.setUsername("pureshotssupp@gmail.com");
-    mailSender.setPassword("Changeisgood1234");
+    mailSender.setUsername("pureshotssupp@gmail.com"); //mail which you send mail from
+    mailSender.setPassword("Changeisgood1234"); //password for above mail
 
     Properties props = mailSender.getJavaMailProperties();
     props.put("mail.transport.protocol", "smtp");

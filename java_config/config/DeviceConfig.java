@@ -1,4 +1,4 @@
-package com.pureshots.config;
+package <some_package>;
 
 import java.util.*;
 import org.springframework.context.annotation.*;
@@ -7,8 +7,6 @@ import org.springframework.web.method.support.*;
 import org.springframework.web.servlet.config.annotation.*;
 
 @Configuration
-@EnableWebMvc
-@ComponentScan(basePackages = "com.pureshots")
 public class DeviceConfig extends WebMvcConfigurerAdapter
 {
   @Bean

@@ -1,0 +1,1 @@
+# Configuration of Spring MVC web application

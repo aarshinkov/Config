@@ -1,4 +1,4 @@
-package com.pureshots.config;
+package <some_package>;
 
 import java.util.*;
 import org.springframework.context.annotation.*;
@@ -6,8 +6,6 @@ import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.*;
 
 @Configuration
-@EnableWebMvc
-@ComponentScan(basePackages = "com.pureshots")
 public class LanguageConfig extends WebMvcConfigurerAdapter {
 
     @Override
