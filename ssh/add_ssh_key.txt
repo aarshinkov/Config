@@ -16,7 +16,7 @@ Enter key name (not required)
 
 5.
 Enter passphrase (not required)
-	-- if you want NO PASSWORD simpli leave blank and click Enter
+	-- if you want NO PASSWORD simply leave blank and click Enter
 
 6. To view files in .ssh folder (it might have to navigate to folder containing .ssh folder with cd command)
 dir .ssh
