@@ -9,29 +9,44 @@ git config --global user.email <email>
 
 ========== END CONFIG ==========
 
-========== USERS ==========
+================================
 
 --- clone (get project) ---
 git clone <repository_link>
 
---- get changes from repository ---
-git checkout master/<branch_name>
+--- get changes from specific branch ---
+git pull origin <branch_name>
+
+--- get all changes
 git pull
 
 --- use master/branch ---
-git checkout master/<branch_name>
+git checkout <branch_name>
 
 --- view local changes ---
 git status
 
---- commit to branch ---
+--- commit all changes ---
 git add .
 git commit -m "<commit_message>"
-git commit <filename> -m "<commit_message>" (for only one file)
+git push 
+
+--- commit all changes to master branch ---
+git add .
+git commit -m "<commit_message>"
+git push origin master
+
+--- commit all changes to specific branch ---
+git add .
+git commit -m "<commit_message>"
 git push --set-upstream origin <branch_name>
 
+--- commit only one file ---
+git commit <filename> -m "<commit_message>" (for only one file)
+
+--- if there are any lock problems ---
 --- remove locks ---
-rm -f ./.git/index.lock
+rm -f
 
 --- view log history ---
 git log
@@ -39,26 +54,27 @@ git log
 --- cancel last commit before you pushed it ---
 git reset --hard HEAD^
 
-========== END USERS ==========
+================================
 
-========== ADMINISTRATOR ==========
-
---- commit to master (only for administrator) ---
+--- commit to master ---
 git add .
 git commit -m "<commit_message>"
 git commit <filename> -m "File changed"
 git push -u origin master
 
---- create branch (only for administrator) ---
+--- create branch ---
 git branch <branch_name>
 
 --- put branch in repository ---
 git push origin <branch_name>
 
---- detele branch (only for administrator) ---
+--- put all branches including their files in repository ---
+git push
+
+--- detele branch ---
 git checkout master
 git branch -d <branch_name>
 git remote prune origin
 git push origin --delete <branch_name>
 
-========== END ADMINISTRATOR ==========
+================================
