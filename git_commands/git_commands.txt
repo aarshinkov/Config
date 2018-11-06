@@ -48,6 +48,9 @@ git commit <filename> -m "<commit_message>" (for only one file)
 --- remove locks ---
 rm -f
 
+--- if you have specific lock ---
+rm -f .git/index.lock
+
 --- view log history ---
 git log
 
