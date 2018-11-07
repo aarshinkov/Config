@@ -57,6 +57,12 @@ git log
 --- cancel last commit before you pushed it ---
 git reset --hard HEAD^
 
+--- go back to certain commit PERMANENTLY!!! ---
+git reset --hard <commit_id>
+git reset --soft HEAD@{1}
+git commit -m "<commit_message>"
+git push
+
 ================================
 
 --- commit to master ---
